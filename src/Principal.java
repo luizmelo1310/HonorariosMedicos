@@ -83,7 +83,7 @@ public class Principal {
 		cirurgia2.SetMedico(medico1);
 		cirurgia2.SetPaciente(paciente1);
 		cirurgia2.SetDataProcedimento("01/10/2021");
-		cirurgia2.SetNomeProcedimento("CIRURGIA DISCECTOMIA\r\n"
+		cirurgia2.SetNomeProcedimento("CIRURGIA DISCECTOMIA "
 										+ "TOTALMENTE ENDOSCÓPICA");
 		cirurgia2.SetUrgencia(false);
 		cirurgia2.SetValorFaturado(13750);
@@ -129,19 +129,19 @@ public class Principal {
 		
 
 		
-		return "Medico Responsavel: "+cirurgia.GetMedico().GetNome()+
-				"\nPaciente: "+cirurgia.GetPaciente().GetNome()+
-				"\nData de Nascimento: "+cirurgia.GetPaciente().GetDataNascimento()+
-				"\nData do Procedimento: "+ cirurgia.GetDataProcedimento() +
-				"\nProcedimento: "+ cirurgia.GetNomeProcedimento() +
-				"\nValor Total Faturado: R$ "+ df.format(cirurgia.GetValorFaturado()) +
-				"\n Total de Honorários dos Medicos: R$ "+ df.format(calculadora.GetValorHonorarioMedicos()) +
-				"\n Total de Honorários dos Enfermeiros: R$ "+ df.format(calculadora.GetValorHonorarioEnfermeiros()) +
-				"\n Total de Honorários dos Auxiliares: R$ "+ df.format(calculadora.GetValorHonorarioAuxiliares())+
-				"\n Nome Convenio: R$ "+cirurgia.GetContrato().GetConvenio().GetNome()+
-				"\n Porcentagem Taxa Administrativa: R$ "+df.format(cirurgia.GetContrato().GetTaxaAdmFormatada())+"%"+
-				"\n Porcentagem Taxa Urgencia: R$ "+ df.format(cirurgia.GetContrato().GetAcrescimoUrgenciaFormatada())+"%"+
-				"\n Nome Hospital: R$ "+ cirurgia.GetContrato().GetHospital().GetNome()+
+		return 	"\n\tMedico Responsavel: "+cirurgia.GetMedico().GetNome()+
+				"\n\t Paciente: "+cirurgia.GetPaciente().GetNome()+
+				"\n\t Data de Nascimento: "+cirurgia.GetPaciente().GetDataNascimento()+
+				"\n\t Data do Procedimento: "+ cirurgia.GetDataProcedimento() +
+				"\n\t Procedimento: "+ cirurgia.GetNomeProcedimento() +
+				"\n\t Valor Total Faturado: R$ "+ df.format(cirurgia.GetValorFaturado()) +
+				"\n\t Total de Honorários dos Medicos: R$ "+ df.format(calculadora.GetValorHonorarioMedicos()) +
+				"\n\t Total de Honorários dos Enfermeiros: R$ "+ df.format(calculadora.GetValorHonorarioEnfermeiros()) +
+				"\n\t Total de Honorários dos Auxiliares: R$ "+ df.format(calculadora.GetValorHonorarioAuxiliares())+
+				"\n\t Nome Convenio: R$ "+cirurgia.GetContrato().GetConvenio().GetNome()+
+				"\n\t Porcentagem Taxa Administrativa: R$ "+df.format(cirurgia.GetContrato().GetTaxaAdmFormatada())+"%"+
+				"\n\t Porcentagem Taxa Urgencia: R$ "+ df.format(cirurgia.GetContrato().GetAcrescimoUrgenciaFormatada())+"%"+
+				"\n\t Nome Hospital: R$ "+ cirurgia.GetContrato().GetHospital().GetNome()+
 				"\n\n\n";
 	}
 	
