@@ -24,8 +24,6 @@ public class Principal {
 		medico2.SetNome("Medico 2");
 		medico2.SetFatorMultiplicacao(3);
 		
-	
-		
 		
 		Cirurgia cirurgia1 = new Cirurgia();
 		
