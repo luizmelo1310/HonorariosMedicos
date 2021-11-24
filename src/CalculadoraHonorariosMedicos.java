@@ -8,19 +8,20 @@ public class CalculadoraHonorariosMedicos {
 	
 	public void CalcularHonorarioMedico(Cirurgia cirurgiaP) {
 		
-		Cirurgia cirurgia = new Cirurgia();
-		cirurgia = cirurgiaP;
 		
 		Medico medico = new Medico();
-		medico = cirurgia.GetMedico();
+		medico = cirurgiaP.GetMedico();
 		
-		double valorFaturado = cirurgia.GetValorFaturado();
+		double valorFaturado = cirurgiaP.GetValorFaturado();
 		valorFaturado = valorFaturado*medico.GetFatorMultiplicacao();
 		
-		valorFaturado -= valorFaturado*0.10;
+		double dTaxaAdm = cirurgiaP.GetContrato().GetTaxaAdm();
+		double dAcrescimoUrgencia = cirurgiaP.GetContrato().GetAcrescimoUrgencia();
 		
-		if(cirurgia.GetUrgencia() == true) {
-			valorFaturado += valorFaturado*0.15;
+		valorFaturado -= valorFaturado*dTaxaAdm;
+		
+		if(cirurgiaP.GetUrgencia() == true) {
+			valorFaturado += valorFaturado*dAcrescimoUrgencia;
 		}
 		
 		

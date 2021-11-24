@@ -23,18 +23,25 @@ public class Contrato {
 
 		
 		public void SetTaxaAdm(double TaxaAdministracao) {
-			this.TaxaAdministracao = TaxaAdministracao; 
+			this.TaxaAdministracao = TaxaAdministracao/100; 
 		}
 		public double GetTaxaAdm() {
 			return this.TaxaAdministracao ;
 		}
+		
+		public double GetTaxaAdmFormatada() {
+			return this.TaxaAdministracao*100 ;
+		}
 
 		
 		public void SetAcrescimoUrgencia(double AcrescimoUrgencia) {
-			this.AcrescimoUrgencia = AcrescimoUrgencia; 
+			this.AcrescimoUrgencia = AcrescimoUrgencia/100; 
 		}
 		public double GetAcrescimoUrgencia() {
 			return this.AcrescimoUrgencia ;
+		}
+		public double GetAcrescimoUrgenciaFormatada() {
+			return this.AcrescimoUrgencia*100 ;
 		}
 
 
