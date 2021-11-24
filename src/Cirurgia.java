@@ -6,6 +6,7 @@ public class Cirurgia {
 	private String NomeProcedimento;
 	private boolean Urgencia;
 	private double ValorFaturado;
+	private Contrato contrato;
 	
 	////____MEDICO____////
 	
@@ -67,5 +68,16 @@ public class Cirurgia {
 	{
 		return this.ValorFaturado;	
 	}
+	
+	public void SetContrato(Contrato contrato) 
+	{
+		this.contrato = contrato;
+	}
+	public Contrato GetContrato() 
+	{
+		return this.contrato;	
+	}
+	
+	
 	
 }
