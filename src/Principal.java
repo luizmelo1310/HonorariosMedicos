@@ -111,7 +111,7 @@ public class Principal {
 		cirurgia4.SetPaciente(paciente3);
 		cirurgia4.SetDataProcedimento("01/10/2021");
 		cirurgia4.SetNomeProcedimento("CIRURGIA VITRECTOMIA");
-		cirurgia4.SetUrgencia(false);
+		cirurgia4.SetUrgencia(true);
 		cirurgia4.SetValorFaturado(25000);
 		cirurgia4.SetContrato(contrato4);
 		
@@ -139,8 +139,8 @@ public class Principal {
 				"\n Total de Honorários dos Enfermeiros: R$ "+ df.format(calculadora.GetValorHonorarioEnfermeiros()) +
 				"\n Total de Honorários dos Auxiliares: R$ "+ df.format(calculadora.GetValorHonorarioAuxiliares())+
 				"\n Nome Convenio: R$ "+cirurgia.GetContrato().GetConvenio().GetNome()+
-				"\n Porcentagem Taxa Administrativa: R$ "+cirurgia.GetContrato().GetTaxaAdmFormatada()+"%"+
-				"\n Porcentagem Taxa Urgencia: R$ "+ cirurgia.GetContrato().GetAcrescimoUrgenciaFormatada()+"%"+
+				"\n Porcentagem Taxa Administrativa: R$ "+df.format(cirurgia.GetContrato().GetTaxaAdmFormatada())+"%"+
+				"\n Porcentagem Taxa Urgencia: R$ "+ df.format(cirurgia.GetContrato().GetAcrescimoUrgenciaFormatada())+"%"+
 				"\n Nome Hospital: R$ "+ cirurgia.GetContrato().GetHospital().GetNome()+
 				"\n\n\n";
 	}
